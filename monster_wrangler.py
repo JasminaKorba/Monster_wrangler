@@ -58,7 +58,7 @@ class Game:
 
         self.info = pygame.image.load("info.png")
         self.info_rect = self.info.get_rect()
-        self.info_rect.bottomleft = (5, WINDOW_HEIGHT - 5)
+        self.info_rect.bottomleft = (20, WINDOW_HEIGHT - 30)
 
     def draw(self):
         # Set colors
@@ -200,6 +200,10 @@ class Game:
             pygame.image.load("map11.jfif"),
             pygame.image.load("map12.jfif"),
             pygame.image.load("map13.jfif"),
+            pygame.image.load("map14.jfif"),
+            pygame.image.load("map15.jfif"),
+            pygame.image.load("map17.jfif"),
+            pygame.image.load("map18.jfif"),
         ]
 
         random_img_pos = random.randint(0, 10)
@@ -382,6 +386,7 @@ my_game = Game(my_player, my_monsters_group)
 my_game.pause_game("Monster Wrangler", "Press 'Enter' to play")
 my_game.start_new_round()
 
+# Main game loop
 while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
